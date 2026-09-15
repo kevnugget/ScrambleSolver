@@ -15,3 +15,18 @@ def neighbors(row, column):
             if in_bounds(next_row, next_column):
                 adjacent.append((next_row, next_column))
     return adjacent
+
+
+def search_from(grid, row, column, visited, path, dictionary, found):
+    """Recursively extend path from (row, column), recording any dictionary words found."""
+    visited.add((row, column))
+    path += grid[row][column]
+
+    if len(path) >= 3 and path in dictionary:
+        found.add(path)
+
+    for next_row, next_column in neighbors(row, column):
+        if (next_row, next_column) not in visited:
+            search_from(grid, next_row, next_column, visited, path, dictionary, found)
+
+    visited.remove((row, column))
