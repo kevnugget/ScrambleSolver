@@ -1,4 +1,4 @@
-# Scramble Solver
+# Word Hunt Solver
 
 Finds every valid word in a 4x4 Word Hunt / Boggle-style letter grid.
 
