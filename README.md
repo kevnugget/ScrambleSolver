@@ -2,10 +2,21 @@
 
 Finds every valid word in a 4x4 Word Hunt / Boggle-style letter grid.
 
+Boards can be entered manually. A screenshot-upload feature (using OCR to read the
+grid automatically) is planned but not yet implemented.
+
 ## Requirements
+
+Currently needed (core solver):
 
 - OS: Windows 11 Pro (10.0.26200) — should also run on any OS with Python installed
 - Python 3.12.3
+
+Planned, not yet needed (web app + screenshot input):
+
+- Flask, for the web interface
+- Tesseract OCR (system install) + the `pytesseract` Python package, for reading a
+  board from an uploaded screenshot
 
 ## How to run
 
